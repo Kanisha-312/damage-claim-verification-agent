@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(.venv/bin/python3 code/main.py)",
+      "Bash(echo \"Exit: $?\")",
+      "Bash(.venv/bin/python3 -c \"print\\('python works', flush=True\\)\")",
+      "Bash(.venv/bin/python3 -c ' *)",
+      "Bash(python3 code/main.py)",
+      "Bash(python3 -c ' *)",
+      "Bash(echo \"Exit code: $?\")",
+      "Bash(cat /Users/kanisharaja/hackerrank-orchestrate-june26/code/main.py 2>/dev/null | head -5 || echo \"\\(no such file\\)\")",
+      "Read(//Users/kanisharaja/hackerrank-orchestrate-june26/code/**)",
+      "Bash(ls /Users/kanisharaja/hackerrank-orchestrate-june26/)",
+      "Read(//Users/kanisharaja/hackerrank-orchestrate-june26/**)"
+    ]
+  }
+}
