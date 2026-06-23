@@ -120,18 +120,18 @@ Evaluated on 20 labeled rows from `dataset/sample_claims.csv`.
 
 | Field | Accuracy |
 |---|---|
-| `claim_status` | 70% |
-| `object_part` | 85% |
-| `evidence_standard_met` | ~80% |
-| `valid_image` | ~90% |
-| `severity` | 35% |
-| `risk_flags` (Jaccard) | ~55% |
+| `claim_status` | 75% |
+| `object_part` | 90% |
+| `evidence_standard_met` | 70% |
+| `valid_image` | 70% |
+| `severity` | 45% |
+| `risk_flags` (Jaccard) | 40% |
 
-**claim_status (70%)** — the model generally distinguishes supported from contradicted claims but struggles with borderline cases where the image shows damage that is real but less severe than claimed.
+**claim_status (75%)** — the model generally distinguishes supported from contradicted claims but struggles with borderline cases where the image shows damage that is real but less severe than claimed.
 
-**object_part (85%)** — high accuracy; most errors occur when a claim mentions two parts and the model picks the secondary one.
+**object_part (90%)** — high accuracy; most errors occur when a claim mentions two parts and the model picks the secondary one.
 
-**severity (35%)** — the weakest field. The five-level scale (`none` / `low` / `medium` / `high` / `unknown`) is subjective and the model frequently picks `medium` where the expected label is `low` or `high`. Calibration prompting helps but does not close the gap.
+**severity (45%)** — the weakest field. The five-level scale (`none` / `low` / `medium` / `high` / `unknown`) is subjective and the model frequently picks `medium` where the expected label is `low` or `high`. Calibration prompting helps but does not close the gap.
 
 ---
 
